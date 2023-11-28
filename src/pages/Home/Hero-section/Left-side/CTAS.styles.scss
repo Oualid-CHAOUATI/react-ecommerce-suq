@@ -1,0 +1,49 @@
+.ctas-wrapper {
+  gap: 0.5em;
+}
+.cta-btn {
+  color: inherit;
+  padding: 0.6em 1.8em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  position: relative;
+
+  //contains the label (text)
+  span,
+  svg {
+    z-index: 4;
+  }
+  svg {
+    height: 1.2em;
+    width: auto;
+    fill: currentColor;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    transition: 200ms;
+    will-change: transform;
+    border-radius: 0.2em;
+  }
+  &:hover:before {
+    transform: rotate(4deg);
+    transform: skew(10deg);
+    transform: scale(1.05);
+  }
+  &.main {
+    &:before {
+      background: var(--green);
+    }
+    color: #fff;
+  }
+
+  &.secondary {
+    &:before {
+      border: 2px solid var(--green);
+    }
+  }
+}
+//------------------------

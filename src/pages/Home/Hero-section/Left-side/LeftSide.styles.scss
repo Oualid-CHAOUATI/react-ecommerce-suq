@@ -1,0 +1,23 @@
+.left-side {
+  padding-block: 5em;
+  .main-title {
+    white-space: nowrap;
+    font-size: clamp(18px, 7vw, 80px);
+    width: min-content;
+  }
+
+  .site-description {
+    color: var(--text-color-light);
+    margin-top: 1em;
+    margin-bottom: 2em;
+    max-width: 50ch;
+
+    &::first-letter {
+      margin-left: 2em;
+    }
+
+    line-height: 1.8;
+  }
+}
+
+// --Btns---

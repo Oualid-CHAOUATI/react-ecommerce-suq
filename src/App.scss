@@ -1,0 +1,145 @@
+$max-w: 2000px;
+.container {
+  padding-inline: calc(0.1em + 2vw);
+  max-width: $max-w;
+  margin-inline: auto;
+}
+
+.container-- {
+  max-width: $max-w;
+  margin-inline: auto;
+}
+
+:root {
+  --font-size: Clamp(18px, 1.5vw, 25px);
+}
+
+body {
+  font-size: var(--font-size);
+}
+
+.main-title {
+  text-align: right;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200&display=swap");
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  overflow-x: hidden;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Kanit", sans-serif;
+}
+
+p {
+  line-height: 1.4;
+}
+
+.section-title {
+  margin-top: 1em;
+  margin-bottom: 1.5em;
+  color: var(--blue-text);
+  position: relative;
+  z-index: -1;
+  max-width: 100%;
+
+  span {
+    position: relative;
+    padding: 0 1em;
+    border-radius: 2em;
+  }
+
+  span:before,
+  span:after {
+    position: absolute;
+    left: -50vw;
+    right: -50vw;
+    margin: auto;
+  }
+  span::before {
+    content: "";
+    top: 50%;
+    transform: translateY(-50%);
+    height: 6px;
+    width: calc(100% + 200px);
+    max-width: 90vw;
+    color: inherit;
+    $s: 100px;
+    background: linear-gradient(
+      90deg,
+      currentColor,
+      transparent #{$s},
+      transparent calc(100% - #{$s}),
+      currentColor
+    );
+    border-radius: 1em;
+    z-index: -1;
+    opacity: 0.4;
+  }
+
+  span::after {
+    content: attr(data-text);
+    top: 20%;
+    height: 7px;
+    font-size: 2em;
+    width: 100vw;
+    text-align: center;
+    opacity: 0.05;
+    z-index: 0;
+  }
+}
+
+.bg-blue {
+  background-color: var(--blue-dark);
+}
+
+.bg-green {
+  background-color: var(--green);
+}
+
+[class*="long-btn"] {
+  padding: 0.4em 0.8em;
+  text-align: center;
+  color: #fff !important;
+
+  &[class*="long-btn-r"] {
+    border-radius: 0.3em;
+  }
+}
+
+.max-c {
+  width: max-content;
+}
+
+[class*="new"] {
+  position: relative;
+
+  &::before {
+    content: "NEW";
+    position: absolute;
+    top: 0;
+    right: 1em;
+    left: auto;
+    padding: 0.5em 0.5em 0.6em 0.5em;
+    background: var(--green);
+    width: max-content;
+    color: #fff;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0 100%);
+  }
+}
+
+.main-txt {
+  color: var(--text-color);
+}
+
+.sec-txt {
+  color: var(--text-color-light);
+}
+
+.b {
+  font-weight: bold;
+}

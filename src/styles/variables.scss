@@ -1,0 +1,42 @@
+:root {
+  --green: #2eb629;
+  --green-light: rgb(185, 235, 185);
+  --green-text: #2fc92a;
+
+  --blue: #6c2b8842;
+  --blue-text: #c90af6;
+  --blue-dark: rgb(62, 13, 75);
+
+  --white: #fff;
+  --white-light: #dfcccc;
+
+  --black: #1a1919;
+  --black-light: rgb(80, 76, 76);
+
+  --bg-dark: #25021d;
+
+  --input-bg: rgb(8, 8, 70);
+
+  color-scheme: light;
+  --text-color: var(--black);
+  //todo: modifier color light à color-secondary
+  --text-color-light: var(--black-light);
+  --bg-color: var(--white);
+  --products-category-color: var(--blue-dark);
+}
+
+[color-scheme="light"] {
+  color-scheme: light;
+  --text-color: var(--black);
+  --text-color-light: var(--black-light);
+  --bg-color: var(--white);
+  --products-category-color: var(--blue-dark);
+}
+
+[color-scheme="dark"] {
+  color-scheme: dark;
+  --text-color: var(--white);
+  --text-color-light: var(--white-light);
+  --bg-color: var(--bg-dark);
+  --products-category-color: var(--white);
+}

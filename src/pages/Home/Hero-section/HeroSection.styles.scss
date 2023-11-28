@@ -1,0 +1,46 @@
+#hero-section {
+  // height: 100vh;
+  // max-height: 800px;
+  position: relative;
+  padding-block: 1em;
+
+  .container {
+    height: 100%;
+    gap: 2em;
+    overflow: hidden;
+  }
+
+  @media (max-width: 1250px) {
+    .left-side {
+      text-align: center;
+      width: 100%;
+      .main-title {
+        min-width: 100%;
+        text-align: center;
+      }
+      .site-description {
+        margin-inline: auto;
+      }
+    }
+
+    .ctas-wrapper {
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .site-description::first-letter {
+      margin-left: 0 !important;
+    }
+    .hero-gallery {
+      opacity: 0.1;
+    }
+
+    .hero-gallery-wrapper {
+      position: absolute !important;
+      pointer-events: none;
+      inset: 0;
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}

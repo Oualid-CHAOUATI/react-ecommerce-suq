@@ -1,0 +1,44 @@
+$br: 3em;
+
+footer a {
+  text-decoration: underline;
+}
+.footer-content {
+  border-radius: $br $br 0 0;
+  padding: 2em;
+  gap: 1em;
+  .col {
+    max-width: 500px;
+  }
+}
+
+.footer-title {
+  margin-block: 0.5em 1em;
+}
+.col-txt {
+  padding-left: 1.6em;
+}
+
+footer {
+  color: #fff;
+  $pt: 5em;
+  padding-top: $pt;
+  margin-top: auto;
+  margin-bottom: 0;
+  justify-self: flex-end;
+  position: relative;
+  overflow: hidden;
+}
+
+.copyrights,
+.footer-content {
+  background: var(--blue-dark);
+}
+
+.copyrights {
+  padding: 1em;
+}
+
+footer [class*="btn"] {
+  margin-block: 1em;
+}

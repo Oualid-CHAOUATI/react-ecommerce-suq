@@ -1,0 +1,58 @@
+#scheme-checkbox {
+  display: none;
+}
+
+$s: 1em;
+label[for="scheme-checkbox"] {
+  height: $s;
+  width: $s * 2.2;
+  border-radius: 5em;
+  margin: 0 0.6em;
+
+  position: relative;
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+  }
+  &:before {
+    top: 0;
+    bottom: 0;
+    height: $s;
+    border: 4px solid var(--blue);
+    border-radius: 5em;
+    box-sizing: border-box;
+    left: 0;
+    right: calc(100% - #{$s});
+    transition-property: left, right;
+    transition-duration: 250ms;
+    transition-delay: 0s, 100ms;
+    z-index: 1;
+  }
+  &:after {
+    // background: rgb(219, 166, 212);
+    background-color: rgba(0, 0, 0, 0.466);
+    $s: -0.2em;
+    left: $s;
+    right: $s;
+    top: $s;
+    bottom: $s;
+    border-radius: inherit;
+    // z-index: -1;
+  }
+}
+
+#scheme-checkbox:checked + * > label:before {
+  transition-delay: 100ms, 0s;
+  left: calc(100% - #{$s});
+  right: 0;
+}
+.scheme-label-wrapper {
+  margin: 0 1em;
+
+  svg {
+    height: $s * 0.8;
+    width: $s * 0.8;
+    fill: currentColor;
+  }
+}

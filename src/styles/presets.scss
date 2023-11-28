@@ -1,0 +1,95 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+//presets---------
+.HIDDEN {
+  display: none;
+}
+.HIDE {
+  height: 0;
+  overflow: hidden;
+}
+[class*="btn"] {
+  cursor: pointer;
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.pointer {
+  cursor: pointer;
+}
+svg {
+  height: 100%;
+  width: 100%;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+input,
+button,
+textarea {
+  font-size: inherit;
+}
+
+button {
+  border: 0;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+[class*="flex"] {
+  display: flex;
+
+  &[class*="iflex"] {
+    display: inline-flex;
+  }
+  &[class*="flex-center"] {
+    align-items: center;
+    justify-content: center;
+  }
+
+  &[class*="flex-column"] {
+    flex-direction: column;
+  }
+
+  &[class*="flex-wrap"] {
+    flex-wrap: wrap;
+  }
+}
+
+.center-text {
+  text-align: center;
+}
+
+[class*="grid"] {
+  display: grid;
+
+  &[class*="grid-center"] {
+    place-items: center;
+  }
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.center-margin-x {
+  margin-inline: auto;
+}
