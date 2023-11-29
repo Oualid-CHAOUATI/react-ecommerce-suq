@@ -15,8 +15,9 @@ $gap: 2.4em;
   gap: $gap;
 
   transform: rotate(15deg);
-  &:hover img {
+  &:has(img:hover) img:not(:hover) {
     outline-color: transparent !important;
+    scale: 0.9;
   }
   .hero-gallery-col {
     display: flex;
