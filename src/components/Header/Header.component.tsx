@@ -84,15 +84,15 @@ export const Header = () => {
               </a>
             </li>
 
-            <li>
+            <li className="iflex flex-center">
               {/* ------ schemeBtn */}
 
               <SchemeBtn />
             </li>
           </ul>
-          <a href="connexion.html" className="long-btn-r bg-blue">
+          {/* <a href="connexion.html" className="long-btn-r bg-blue">
             m'inscrire
-          </a>
+          </a> */}
           <a href="profil.html" className="profil-icon to-hide-mobile">
             {profilIcon}
           </a>

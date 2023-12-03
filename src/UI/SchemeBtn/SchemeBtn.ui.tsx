@@ -13,7 +13,7 @@ export const SchemeBtn = () => {
         }}
       />
 
-      <div className="scheme-label-wrapper iflex center-align">
+      <div className={`scheme-label-wrapper flex flex-center `}>
         {sunIcon}
         <label htmlFor="scheme-checkbox" className="pointer"></label>
         {moonIcon}
@@ -64,7 +64,6 @@ function useScheme() {
 const sunIcon = (
   <svg
     version="1.1"
-    id="Capa_1"
     xmlns="http://www.w3.org/2000/svg"
     // xmlns:xlink="http://www.w3.org/1999/xlink"
     x="0px"
@@ -72,6 +71,8 @@ const sunIcon = (
     viewBox="0 0 302.4 302.4"
     // style="enable-background:new 0 0 302.4 302.4;"
     // xml:space="preserve"
+    id="sun-svg"
+    // color="yellow"
   >
     <g>
       <g>
@@ -156,7 +157,6 @@ const sunIcon = (
 const moonIcon = (
   <svg
     version="1.1"
-    id="Capa_1"
     xmlns="http://www.w3.org/2000/svg"
     // xmlns:xlink="http://www.w3.org/1999/xlink"
     x="0px"
@@ -164,6 +164,7 @@ const moonIcon = (
     viewBox="0 0 312.999 312.999"
     // style="enable-background:new 0 0 312.999 312.999;"
     // xml:space="preserve"
+    id="moon-svg"
   >
     <g>
       <g>
