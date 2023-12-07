@@ -1,0 +1,64 @@
+.input-container {
+  $label-padding-inline: 0.5em;
+  $input-padding-inline: 0.5em;
+
+  $label-padding-block: 0.4em;
+  $input-padding-block: 0.5em;
+  //for input and label
+  $radius: 0.2em;
+
+  $border: 2px solid var(--text-color);
+  width: 100%;
+  display: block;
+  position: relative;
+
+  .label-text {
+    border: $border;
+    border-bottom: 0;
+    display: block;
+    max-width: max-content;
+    transition: 200ms;
+    padding-inline: $label-padding-inline;
+    padding-block: $label-padding-block;
+    border-radius: $radius $radius 0 0;
+    font-weight: 700;
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+  .input-container__wrapper {
+    border: $border;
+    border-radius: 0 $radius $radius $radius;
+    width: 100%;
+    .input {
+      background-color: transparent !important;
+      outline: 0;
+      border: 0;
+      flex-grow: 1;
+      width: 100%;
+      padding-block: $input-padding-block;
+      padding-inline: $input-padding-inline;
+    }
+    .eye-toggle-btn {
+      padding-inline: 0.5em;
+      border-radius: 0.1em;
+      background-color: var(--text-color);
+      svg {
+        height: 1.4em;
+        width: 100%;
+        // height: 1em;
+        fill: var(--bg-color);
+        // stroke-width: 1px;
+      }
+    }
+  }
+
+  &:has(.input:focus) {
+    outline: dashed 1px var(--text-color);
+    outline-offset: 0.7em;
+    .label-text {
+      background-color: var(--text-color);
+      color: var(--bg-color);
+    }
+  }
+}

@@ -33,11 +33,3 @@ export const ProductCard = ({
     </div>
   );
 };
-
-export const ProductCardTry = () => {
-  return (
-    <div>
-      <ProductCard />
-    </div>
-  );
-};

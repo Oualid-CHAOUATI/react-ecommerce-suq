@@ -68,10 +68,6 @@ a {
   &[class*="flex-column"] {
     flex-direction: column;
   }
-
-  &[class*="flex-wrap"] {
-    flex-wrap: wrap;
-  }
 }
 
 .center-text {

@@ -1,23 +1,26 @@
 import { useState } from "react";
 import "./SchemeBtn.styles.scss";
+import { FlexWrapper } from "../FlexWrapper/FlexWrapper";
 export const SchemeBtn = () => {
   const [scheme, toggleScheme] = useScheme();
+
   return (
     <>
-      <input
-        type="checkbox"
-        id="scheme-checkbox"
-        checked={scheme == "dark"}
-        onClick={() => {
-          toggleScheme();
-        }}
-      />
-
-      <div className={`scheme-label-wrapper flex flex-center `}>
-        {sunIcon}
-        <label htmlFor="scheme-checkbox" className="pointer"></label>
-        {moonIcon}
-      </div>
+      <FlexWrapper as="label" className={`scheme-label pointer`} center>
+        <>
+          <input
+            type="checkbox"
+            id="scheme-checkbox"
+            checked={scheme == "dark"}
+            style={{ display: "none" }}
+            onClick={() => {
+              toggleScheme();
+            }}
+          />
+          <span className="icon icon--moon">{moonIcon}</span>
+          <span className="icon icon--sun">{sunIcon}</span>
+        </>
+      </FlexWrapper>
     </>
   );
 };
@@ -136,21 +139,6 @@ const sunIcon = (
         <path d="M80.4,66.4l-22-22c-4-4-10.4-4-14.4,0s-4,10.4,0,14.4l22,22c4,4,10.4,4,14.4,0S84.4,70.4,80.4,66.4z" />
       </g>
     </g>
-    <g></g>
-    <g></g>
-    <g></g>
-    <g></g>
-    <g></g>
-    <g></g>
-    <g></g>
-    <g></g>
-    <g></g>
-    <g></g>
-    <g></g>
-    <g></g>
-    <g></g>
-    <g></g>
-    <g></g>
   </svg>
 );
 
@@ -179,20 +167,5 @@ const moonIcon = (
         />
       </g>
     </g>
-    <g></g>
-    <g></g>
-    <g></g>
-    <g></g>
-    <g></g>
-    <g></g>
-    <g></g>
-    <g></g>
-    <g></g>
-    <g></g>
-    <g></g>
-    <g></g>
-    <g></g>
-    <g></g>
-    <g></g>
   </svg>
 );

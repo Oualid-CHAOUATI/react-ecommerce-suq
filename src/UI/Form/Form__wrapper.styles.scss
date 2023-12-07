@@ -1,0 +1,40 @@
+// $form-max-width: 550px;
+
+.form-container {
+  // max-width: $form-max-width;
+  padding: 0.5em;
+  outline: 2px dashed var(--text-color);
+  .description {
+    margin-bottom: 2em;
+
+    position: relative;
+
+    color: var(--white);
+    &:before {
+      content: "";
+      position: absolute;
+      inset: -1em;
+      background-color: var(--blue-text);
+      z-index: -1;
+      transform-origin: 30% 100%;
+      transform: rotate(-2deg);
+      border-radius: 0.4em;
+    }
+  }
+
+  > * {
+    position: relative;
+    z-index: 2;
+  }
+  svg {
+    width: 2em;
+    fill: currentColor;
+    display: inline;
+    margin-right: 1em;
+  }
+  p {
+    display: inline;
+    // width: auto;
+    font-weight: 800;
+  }
+}

@@ -1,3 +1,4 @@
+import { SectionTitle } from "../../../components/section-title/SectionTitlte";
 import { ServiceCard, TServiceCardsProps } from "./Service-card/Service-card";
 import "./Services-section.styles.scss";
 export const ServicesSection = () => {
@@ -23,11 +24,7 @@ export const ServicesSection = () => {
   return (
     <>
       <section className="services-section container">
-        <h2 className="section-title uppercase center-text">
-          <span data-text="nos services" className="iflex-center">
-            nos services
-          </span>
-        </h2>
+        <SectionTitle>nos services</SectionTitle>
 
         <div className="service-cards ">
           <ServiceCard {...card1} />

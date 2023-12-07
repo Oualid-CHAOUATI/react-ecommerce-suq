@@ -33,64 +33,11 @@ body {
   display: flex;
   flex-direction: column;
   font-family: "Kanit", sans-serif;
+  padding: 1em;
 }
 
 p {
   line-height: 1.4;
-}
-
-.section-title {
-  margin-top: 1em;
-  margin-bottom: 1.5em;
-  color: var(--blue-text);
-  position: relative;
-  z-index: -1;
-  max-width: 100%;
-
-  span {
-    position: relative;
-    padding: 0 1em;
-    border-radius: 2em;
-  }
-
-  span:before,
-  span:after {
-    position: absolute;
-    left: -50vw;
-    right: -50vw;
-    margin: auto;
-  }
-  span::before {
-    content: "";
-    top: 50%;
-    transform: translateY(-50%);
-    height: 6px;
-    width: calc(100% + 200px);
-    max-width: 90vw;
-    color: inherit;
-    $s: 100px;
-    background: linear-gradient(
-      90deg,
-      currentColor,
-      transparent #{$s},
-      transparent calc(100% - #{$s}),
-      currentColor
-    );
-    border-radius: 1em;
-    z-index: -1;
-    opacity: 0.4;
-  }
-
-  span::after {
-    content: attr(data-text);
-    top: 20%;
-    height: 7px;
-    font-size: 2em;
-    width: 100vw;
-    text-align: center;
-    opacity: 0.05;
-    z-index: 0;
-  }
 }
 
 .bg-blue {

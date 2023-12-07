@@ -28,7 +28,7 @@ export const ServiceCard = ({
       <div className="service-img-side flex-center r3">
         <img src={imgUrl} alt="" />
         <a href="produitsNeufs.html" className="btn ">
-          voir plus
+          découvrir
         </a>
       </div>
     </div>

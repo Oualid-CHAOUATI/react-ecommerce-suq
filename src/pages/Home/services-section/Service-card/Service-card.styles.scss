@@ -4,6 +4,7 @@
   margin-inline: auto;
 
   position: relative;
+  border-radius: 1em;
   &.accent-green {
     --clr: var(--green-text);
   }
@@ -19,8 +20,10 @@
   background-color: var(--clr);
   z-index: 1;
   outline: 3px solid #fff;
+
   padding: 0.5em 1em;
   transition: 200ms;
+  border-radius: 0.4em;
   &:hover {
     outline-offset: 0.4em;
   }
@@ -30,7 +33,9 @@
   margin-bottom: 1.2em;
   position: relative;
   width: fit-content;
-
+  padding-inline-start: 1em;
+  border-radius: 2em;
+  z-index: 0;
   &:before {
     position: absolute;
     content: "";
@@ -69,7 +74,7 @@
   position: relative;
   overflow: hidden;
   margin: 1em;
-
+  border-radius: inherit;
   &:after {
     position: absolute;
     content: "";
@@ -89,6 +94,8 @@
   height: 100%;
   width: 100%;
   object-fit: cover;
+  // border-radius: 2em;
+  border-radius: inherit;
 }
 
 @media (max-width: 990px) {

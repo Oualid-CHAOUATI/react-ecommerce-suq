@@ -1,0 +1,23 @@
+.flex-wrapper {
+  &.block {
+    display: flex;
+  }
+  &.inline {
+    display: inline-flex;
+  }
+  &.center-align-items {
+    align-items: center;
+  }
+  &.center-justify-content {
+    justify-content: center;
+  }
+
+  &.center {
+    align-items: center;
+    justify-content: center;
+  }
+  &.wrap {
+    flex-wrap: wrap;
+  }
+  
+}
